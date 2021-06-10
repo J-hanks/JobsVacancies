@@ -28,7 +28,7 @@ class JobVacancyCreateTest(SeleniumStaticServernMixin):
 
     def tearDown(self):
         # Clean up run after every test method.
-        time.sleep(10)
+        # time.sleep(10)
         self.selenium.quit()
         pass
 

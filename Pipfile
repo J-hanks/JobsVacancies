@@ -11,6 +11,8 @@ autopep8 = "*"
 django-crispy-forms = "*"
 django-chartjs = "*"
 selenium = "*"
+coverage = "*"
+coverage-badge = "*"
 
 [requires]
 python_version = "3.8"
