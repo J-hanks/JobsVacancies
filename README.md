@@ -39,3 +39,9 @@ python manage.py runserver
 ### User
 email:      webuser@jobsvacancies.com
 password:   jobsvacancies
+
+
+### Test
+```bash
+python manage.py test
+```
