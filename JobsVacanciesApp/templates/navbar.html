@@ -1,0 +1,53 @@
+{% load i18n %} {% load static %}
+{% load has_group %}
+
+<!-- Authentication Bar -->
+<div
+  class="d-flex justify-content-end py-1 px-3 px-md-4   authenticationBar"
+>
+<nav class="my-2 ">
+    {% if  user.is_authenticated  %}
+        <div class="btn-group">
+            <button id="authenticationBarButton" type="button" class="btn authenticationBarButton dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{user}}
+            </button>
+            <div class="dropdown-menu dropdown-menu-right authenticationDropDownMenu ">
+                
+                {% if user.company %}
+                    <a id="id_authbar_my_vacancies_btn" class="dropdown-item authenticationDropDownMenuItem" href="{% url "JobVacancyListView" %}"><i class="flaticon-065-bookmark authenticationDropDownMenuItemIcon"></i>{% trans "My Vacancies" %}</a>
+                {% else %}
+                    <a id="id_authbar_create_vacancy_btn" class="dropdown-item authenticationDropDownMenuItem" href="{% url "JobVacancyCreateView" %}"><i class="flaticon-065-bookmark authenticationDropDownMenuItemIcon"></i>{% trans "Create a vacancy" %}</a>
+                {% endif %}
+                
+                <a id="id_authbar_my_applications_btn" class="dropdown-item authenticationDropDownMenuItem" href="{% url "JobApplicationListView" %}"><i class="flaticon-101-briefcase authenticationDropDownMenuItemIcon"></i>{% trans "My Applications" %}</a>
+                <a id="id_authbar_reports_btn" class="dropdown-item authenticationDropDownMenuItem" href="{% url "ReportsView" %}"><i class="flaticon-061-pie-chart authenticationDropDownMenuItemIcon"></i>{% trans "Reports" %}</a>
+                <a id="logout_btn" class="dropdown-item authenticationDropDownMenuItem" href="{% url "logout" %}"><i class="flaticon-128-log-out authenticationDropDownMenuItemIcon"></i>{% trans "Logout" %}</a>
+            </div>
+        </div>
+    {% else %}
+        <a class="p-2 authenticationBarLink" href="{% url 'login' %}">{% trans "Login" %} </a>
+    {% endif %}
+  </nav>
+</div>
+
+
+<!-- Navbar -->
+<div
+  class="d-flex flex-column flex-md-row align-items-center py-3 px-3 px-md-4 mb-3  shadow-sm navbarContainer"
+  
+>
+  <!-- Display only on largers screens -->
+  <div class="my-0 mr-md-auto font-weight-normal d-none d-md-block">
+    <h5 style="font-weight: bold"><a class="navbarHeaderLink" href="{% url 'home' %}">JobsVacancies</a></h5>
+    <h6 style="font-weight: bold"><a class="navbarHeaderLink" href="https://www.linkedin.com/in/jo%C3%A3o-cunha-ufrrj/" target="_blank">{% trans "Joao Victor Soares da Cunha" %}</a></h6>
+  </div>
+
+  <!-- Display only on smaller screens -->
+    
+    <h5 class="d-block d-md-none" style="font-weight: bold"><a class="navbarHeaderLink" href="{% url 'home' %}">JobsVacancies</a></h5>
+
+  <nav class="my-2 ">
+        {% comment %} <a class="p-2 navbarLink" href="{% url 'about' %}">{% trans "About" %} </a> {% endcomment %}
+        <a class="p-2 navbarLink" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+  </nav>
+</div>

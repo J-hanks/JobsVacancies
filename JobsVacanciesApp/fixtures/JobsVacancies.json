@@ -1,0 +1,134 @@
+[{
+  "model": "JobsVacanciesApp.jobvacancy",
+  "pk": 1,
+  "fields": {
+    "update_date": "2021-06-08T21:12:42.577Z",
+    "create_date": "2021-03-08T21:12:42.577Z",
+    "company": 806202101,
+    "name": "Django Developer",
+    "salary_range": "from_one_to_two",
+    "minimum_education": "3",
+    "requisites": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
+}, {
+  "model": "JobsVacanciesApp.jobvacancy",
+  "pk": 2,
+  "fields": {
+    "update_date": "2021-06-08T21:13:07.350Z",
+    "create_date": "2021-04-08T21:13:07.350Z",
+    "company": 806202101,
+    "name": "Django God",
+    "salary_range": "over_three",
+    "minimum_education": "6",
+    "requisites": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
+}, {
+  "model": "JobsVacanciesApp.jobvacancy",
+  "pk": 3,
+  "fields": {
+    "update_date": "2021-06-08T21:13:28.523Z",
+    "create_date": "2021-05-08T21:13:28.523Z",
+    "company": 806202102,
+    "name": "Non Django Developer",
+    "salary_range": "up_one",
+    "minimum_education": "1",
+    "requisites": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
+}, {
+  "model": "JobsVacanciesApp.jobvacancy",
+  "pk": 4,
+  "fields": {
+    "update_date": "2021-06-08T21:14:48.106Z",
+    "create_date": "2021-06-08T21:14:48.106Z",
+    "company": 806202102,
+    "name": "Some old language shaman",
+    "salary_range": "over_three",
+    "minimum_education": "6",
+    "requisites": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
+}, {
+    "model": "JobsVacanciesApp.jobvacancy",
+    "pk": 5,
+    "fields": {
+      "update_date": "2021-06-08T21:14:48.106Z",
+      "create_date": "2020-07-08T21:14:48.106Z",
+      "company": 806202102,
+      "name": "Enginner",
+      "salary_range": "over_three",
+      "minimum_education": "6",
+      "requisites": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  }, {
+    "model": "JobsVacanciesApp.jobvacancy",
+    "pk": 6,
+    "fields": {
+      "update_date": "2021-06-08T21:14:48.106Z",
+      "create_date": "2021-01-08T21:14:48.106Z",
+      "company": 806202102,
+      "name": "Magician",
+      "salary_range": "over_three",
+      "minimum_education": "6",
+      "requisites": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  }, {
+    "model": "JobsVacanciesApp.jobvacancy",
+    "pk": 7,
+    "fields": {
+      "update_date": "2021-06-08T21:14:48.106Z",
+      "create_date": "2019-09-08T21:14:48.106Z",
+      "company": 806202102,
+      "name": "Airplane Pilot",
+      "salary_range": "over_three",
+      "minimum_education": "6",
+      "requisites": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  }, {
+    "model": "JobsVacanciesApp.jobvacancy",
+    "pk": 8,
+    "fields": {
+      "update_date": "2021-06-08T21:14:48.106Z",
+      "create_date": "2020-03-08T21:14:48.106Z",
+      "company": 806202102,
+      "name": "MI6 Agent",
+      "salary_range": "over_three",
+      "minimum_education": "6",
+      "requisites": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  }, {
+    "model": "JobsVacanciesApp.jobvacancy",
+    "pk": 9,
+    "fields": {
+      "update_date": "2021-06-08T21:14:48.106Z",
+      "create_date": "2020-10-08T21:14:48.106Z",
+      "company": 806202102,
+      "name": "Gardener",
+      "salary_range": "up_one",
+      "minimum_education": "2",
+      "requisites": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+  }, {
+    "model": "JobsVacanciesApp.jobvacancy",
+    "pk": 10,
+    "fields": {
+      "update_date": "2021-06-08T21:14:48.106Z",
+      "create_date": "2020-12-08T21:14:48.106Z",
+      "company": 806202102,
+      "name": "Pizza Maker",
+      "salary_range": "over_three",
+      "minimum_education": "5",
+      "requisites": "You need to make some awesome pizza."
+    }
+  }, {
+    "model": "JobsVacanciesApp.jobvacancy",
+    "pk": 11,
+    "fields": {
+      "update_date": "2021-06-08T21:14:48.106Z",
+      "create_date": "2020-01-08T21:14:48.106Z",
+      "company": 806202102,
+      "name": "Analist",
+      "salary_range": "over_three",
+      "minimum_education": "5",
+      "requisites": "You need to make some awesome analisys."
+    }
+  }
+]

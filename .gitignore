@@ -1,0 +1,19 @@
+#Ignore python cache files
+*.pyc
+
+#Temporary ignore migrations
+/*/migrations/*
+
+#Ignore Database
+db.sqlite3
+
+#Ignore vscode files
+.vscode/
+
+
+#Gunicorn socket file
+gunicorn.sock
+
+# Coverage tests report
+htmlcov/
+.coverage

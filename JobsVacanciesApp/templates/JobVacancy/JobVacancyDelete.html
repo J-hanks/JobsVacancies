@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% load crispy_forms_tags %}
+{% load as_currency %}
+
+{% block page_title %}
+{% trans "My Applications" %}
+{% endblock page_title %}
+{% load static%}
+
+{% block base_content %}
+<div class="container-fluid ">
+    <div class="col-12 d-flex justify-content-center"><h3 class="pb-4">{% trans "Cancel Application" %}</h3></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+               <form method="post">{% csrf_token %}
+                    <h5 class="text-warning">{% trans "Are you sure you want to remove your vacancy " %}"{{ object.name }}"?</h5><br>
+                    <input id="id_remove_btn" class="btn btn-danger" type="submit" value="Remove Vacancy">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock base_content %}

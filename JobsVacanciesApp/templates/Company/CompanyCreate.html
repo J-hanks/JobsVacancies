@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load as_currency %}
+{% load crispy_forms_tags %}
+{% block page_title %}
+{{job_vacancy}}
+{% endblock page_title %}
+{% load static%}
+
+{% block base_content %}
+<div class="container-fluid ">
+    <div class="col-12 d-flex justify-content-center"><h3 class="pb-4">{% trans "Register Company" %}</h3></div>
+    
+    {{form.media}}
+    <form method="post">{% csrf_token %}  
+    <div class="row d-flex justify-content-center" >
+        <div class="px-3" style="max-width: 48rem;">
+            <div class="row " >
+                <div class="col-12">
+                    {{form.name | as_crispy_field}}
+                </div>
+                <div class="col-12">
+                    <div class="form-actions">
+                        <input id="id_submit_btn" class="btn btn-success" type="submit" value="{% trans "Register Company" %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+
+{% endblock base_content %}

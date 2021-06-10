@@ -1,0 +1,17 @@
+[{
+  "model": "JobsVacanciesApp.company",
+  "pk": 806202101,
+  "fields": {
+    "update_date": "2021-06-08T21:03:31.596Z",
+    "create_date": "2021-06-08T21:03:31.596Z",
+    "name": "Some Company One"
+  }
+}, {
+  "model": "JobsVacanciesApp.company",
+  "pk": 806202102,
+  "fields": {
+    "update_date": "2021-06-08T21:03:39.184Z",
+    "create_date": "2021-06-08T21:03:39.184Z",
+    "name": "Some Company Two"
+  }
+}]

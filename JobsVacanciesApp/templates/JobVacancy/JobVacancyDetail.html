@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load as_currency %}
+{% load crispy_forms_tags %}
+{% block page_title %}
+{{job_vacancy}}
+{% endblock page_title %}
+{% load static%}
+
+{% block base_content %}
+<div class="container-fluid ">
+    <div class="col-12 d-flex justify-content-center"><h3 class="pb-1">{% trans "Job Vacancy" %}</h3>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+    {% if  userOwnVacancy%}
+        <a class="badge badge-warning mb-3" href="{% url 'JobVacancyUpdateView' job_vacancy.pk %}">{% trans "Edit" %} </a>
+    {% endif %}
+    </div>
+  
+    
+
+    <div class="row d-flex justify-content-center">
+        <div class="card text-white bg-dark mb-3" style="max-width: 48rem;">
+            <div class="card-header">
+                <h5 class="card-title"><a class="authenticationBarLink" href="{% url 'JobVacancyDetailView' job_vacancy.id  %}">{{job_vacancy}}</a></h5>
+                <h6><a href="{% url 'CompanyDetailView' job_vacancy.company.id  %}">{{job_vacancy.company}}</a></h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{job_vacancy.requisites}}</p>
+            </div>
+        </div>
+    </div>
+        {% if  user.is_authenticated  %}
+
+            {% if  userOwnVacancy%}
+             <div class="alert alert-primary" role="alert">
+                {% trans "You can't apply for you own vacancy, go hire my creator" %}
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-cunha-ufrrj/"> NOW</a>
+            </div>
+
+            {% else %}
+                {% if userApplied %}
+                    <div class="alert alert-primary" role="alert">
+                        {% trans "You already applied for this Vacancy. Don't waste more time, hire my creator" %}
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-cunha-ufrrj/"> NOW</a>
+                    </div>
+                {% else %}
+                
+                {{form.media}}
+                <form method="post">{% csrf_token %}  
+                <div class="row d-flex justify-content-center" >
+                    <div class="px-3" style="max-width: 48rem;">
+                        <div class="row " >
+                        
+                            <div class="col-6">
+                                {{jobApplicationForm.last_education | as_crispy_field}}
+                            </div>
+                            <div class="col-6">
+                                {{jobApplicationForm.pay_claim | as_crispy_field}}
+                            </div>
+                            <div class="col-12">
+                                {{jobApplicationForm.experience | as_crispy_field}}
+                            </div>
+                            <div class="col-12">
+                                <div class="form-actions">
+                                    <input id="id_submit_btn" class="btn btn-success" type="submit" value="{% trans "Send Application" %}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+
+            
+</div>
+
+{% endblock base_content %}

@@ -1,0 +1,22 @@
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load static%}
+
+<div class="col-12">
+    {{form.name | as_crispy_field}}
+</div>
+<div class="col-6">
+    {{form.salary_range | as_crispy_field}}
+</div>
+<div class="col-6">
+    {{form.minimum_education | as_crispy_field}}
+</div>
+<div class="col-12">
+    {{form.requisites | as_crispy_field}}
+</div>
+<div class="col-12">
+    <div class="form-actions">
+        <input id="id_submit_btn" class="btn btn-success" type="submit" value="{% trans "Save Vacancy" %}">
+    </div>
+</div>
+            

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load as_currency %}
+{% block page_title %}
+{% trans "Reports" %}
+{% endblock page_title %}
+{% load static%}
+
+{% block base_content %}
+
+<div class="container-fluid ">
+    
+
+<div class="row d-flex justify-content-center px-4">
+    <div class="col-12 d-flex justify-content-center"><h3 class="pb-4">{% trans "Reports" %}</h3></div>
+
+    <h4 class="job_vacancyApplicationsCount py-2">{% trans "Monthly Vacancies" %}</h4>
+    <canvas id="MonthlyVacanciesChart" ></canvas>
+    <h4 class="job_vacancyApplicationsCount mt-5 py-2">{% trans "Monthly Applications" %}</h4>
+    <canvas id="MonthlyApplicationsChart" ></canvas>
+
+
+
+
+</div>
+<script type="text/javascript" src="{% static 'js/Chart.min.js' %}"></script>
+<script type="text/javascript">
+    
+    $.get('{% url "MonthlyVacanciesChartView" %}', function(data) {
+        var ctx = $("#MonthlyVacanciesChart").get(0).getContext("2d");
+        console.log(data);
+        new Chart(ctx, {
+            type: 'line', data: data
+        });
+    });
+    $.get('{% url "MonthlyApplicationsChartView" %}', function(data) {
+        var ctx = $("#MonthlyApplicationsChart").get(0).getContext("2d");
+        console.log(data);
+        new Chart(ctx, {
+            type: 'line', data: data
+        });
+    });
+</script>
+{% endblock base_content %}

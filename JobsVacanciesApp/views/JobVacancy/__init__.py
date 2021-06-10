@@ -1,0 +1,5 @@
+from .JobVacancyDetailView import JobVacancyDetailView
+from .JobVacancyListView import JobVacancyListView
+from .JobVacancyCreateView import JobVacancyCreateView
+from .JobVacancyDeleteView import JobVacancyDeleteView
+from .JobVacancyUpdateView import JobVacancyUpdateView

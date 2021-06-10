@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block page_title %}
+Login
+{% endblock page_title %}
+
+{% block base_content %}
+
+
+<div class="container-fluid align-items-center " >
+<div class="container-fluid loginFormContainer">
+<h4 class="py-1">{% trans "Access your account" %}</h4>
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {{ form  | crispy}}
+                <input type="hidden" name="next" value="{{ next }}" />
+                {% trans "Problems to access?" %} <a href="{% url 'contact' %}">{% trans "Click Here" %}</a><br>
+                <br>
+                <div class="form-actions">
+                    <input id="id_submit_btn" class="btn  btn-success" type="submit" value="Login" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<hr>
+<a id="id_signup_btn" class="btn  btn-primary" href="{% url 'signup' %}" >{% trans "Create an account" %}</a>
+
+
+<br>
+
+</div>
+
+</div>
+
+
+{% endblock base_content %}

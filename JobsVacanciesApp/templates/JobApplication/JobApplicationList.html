@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% load crispy_forms_tags %}
+{% load as_currency %}
+
+{% block page_title %}
+{% trans "My Applications" %}
+{% endblock page_title %}
+{% load static%}
+
+{% block base_content %}
+<div class="container-fluid ">
+    <div class="col-12 d-flex justify-content-center"><h3 class="pb-4">{% trans "My Applications" %}</h3></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table  table-dark table-striped table-hover">
+                    <thead>
+                        <th>{% trans "Job Vacancy" %}</th>
+                        <th>{% trans "Company" %}</th>
+                        <th>{% trans "Candidates" %}</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                    {% for JobApplication in JobApplications %}
+                    <tr>
+                        <td><a class="authenticationBarLink" href="{% url 'JobVacancyDetailView' JobApplication.job_vacancy.pk %}">{{ JobApplication.job_vacancy }} </a></td>
+                        <td><a href="{% url 'JobVacancyDetailView' JobApplication.job_vacancy.pk %}">{{ JobApplication.job_vacancy.company }} </a></td>
+                        <td><a class="job_vacancyApplicationsCount" href="{% url 'JobVacancyDetailView' JobApplication.job_vacancy.pk %}">{{ JobApplication.job_vacancy.applicationsCount }} </a></td>
+                        <td><a class="badge badge-danger" href="{% url 'JobApplicationDeleteView' JobApplication.pk %}">{% trans "Cancel" %}</a></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock base_content %}

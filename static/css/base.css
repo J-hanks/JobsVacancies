@@ -1,0 +1,148 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+.colorsPallet {
+    /* Logo Colors */
+    color: #cc4468;
+    color: #443f67;
+    color: #fdedcb;
+    color: #fddb92;
+
+
+}
+
+.navbarContainer {
+    background-image: linear-gradient(to bottom, #cc4468 80%, rgb(61, 55, 61));
+}
+
+.navbarLink {
+    color: #fddb92;
+    /* font-weight: bold; */
+}
+
+.darkRed {
+    color: #c52b2e !important;
+}
+
+.navbarLink:hover {
+    color: white;
+}
+
+body {
+    color: white;
+}
+
+.navbarHeaderLink:hover,
+.navbarHeaderLink {
+    color: #fddb92;
+}
+
+
+.authenticationBar {
+    min-height: 20px;
+    background-color: #443f67 !important;
+}
+
+.authenticationBarLink,
+.authenticationBarLink:hover {
+    color: #fddb92;
+}
+
+.authenticationBarButton {
+    background-color: #fddb92;
+    color: #4c3818;
+}
+
+.authenticationBarButton:hover {
+    text-decoration: underline;
+}
+
+.authenticationDropDownMenu {
+    background-color: #fddb92;
+
+}
+
+.authenticationDropDownMenuItem:hover {
+    background-color: #cbac68;
+}
+
+
+.authenticationDropDownMenuItemIcon {
+    margin-right: 8px;
+}
+
+.baseContentContainer {
+    max-width: 920px;
+}
+
+.job_vacancyApplicationsCount{
+    color: #819a41;
+
+}
+
+.loginFormContainer {
+    max-width: 640px;
+    margin-bottom: 3rem;
+}
+
+.baseContentContainer,
+.baseContainer {
+    background-color: rgb(61, 55, 61);
+}
+
+.form-control {
+    background-color: rgb(111, 82, 114);
+    border-color: #443f67;
+    color: rgb(235, 235, 235);
+}
+
+.form-control:focus {
+    background-color: rgb(132, 106, 136);
+    border-color: #443f67;
+    color: rgb(235, 235, 235);
+    box-shadow: 0 0 0 .2rem #cc4468;
+}
+
+.btn-success {
+    background-color: #cc4468;
+    border-color: #cc4468;
+}
+
+.btn-success:hover {
+    background-color: #443f67;
+    border-color: #443f67;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 960px;
+}
+
+.footerContainer {
+    background-color: #ffe9bd;
+    border-top: solid 5px #b58e54 !important;
+}
+
+.footerContainer>div {
+    max-width: 1080px;
+}
+
+.formset-container {
+    margin-bottom: 1em;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.productColumnContainer {
+    margin-bottom: 2rem;
+}
+
+.preFooterContainerLineColumn {
+    border-top: 1px solid #819a41
+}
+
+.preFooterContainerLink {
+    color: #54642a;
+}

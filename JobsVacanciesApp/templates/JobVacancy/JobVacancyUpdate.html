@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load as_currency %}
+{% load crispy_forms_tags %}
+{% block page_title %}
+{% trans "Update Vacancy" %}
+{% endblock page_title %}
+{% load static%}
+
+{% block base_content %}
+<div class="container-fluid ">
+    <div class="col-12 d-flex justify-content-center"><h3 class="pb-4">{% trans "Update Job Vacancy" %}</h3></div>
+    
+    {{form.media}}
+    <form method="post">{% csrf_token %}  
+    <div class="row d-flex justify-content-center" >
+        <div class="px-3" style="max-width: 48rem;">
+            <div class="row" >
+                {% include "JobVacancy/JobVacancyForm.html" with form=form %}
+            </div>
+        </div>
+    </div>
+    </form> 
+</div>
+
+{% endblock base_content %}
