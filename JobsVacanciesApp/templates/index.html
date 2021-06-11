@@ -15,25 +15,7 @@ Home
 
     {% for job_vacancy in  jobs_vacancies %}
         
-        <div class="card text-white bg-dark mb-3 mr-4" style="width: 18rem;">
-            <div class="card-header">
-                <div class="row " >
-                    <div class="col-10">
-                        <h5 class="card-title"><a class="authenticationBarLink" href="{% url 'JobVacancyDetailView' job_vacancy.id  %}">{{job_vacancy}}</a></h5>
-                    </div>
-                    <div class="col-2 d-flex align-items-center">
-                       <h5 class="job_vacancyApplicationsCount"> {{job_vacancy.applicationsCount}}</h5>
-                    </div>
-                    <div class="col-12">
-                        <h6><a href="{% url 'CompanyDetailView' job_vacancy.company.id  %}">{{job_vacancy.company}}</a></h6>
-                    </div>
-
-                </div>
-            </div>
-            <div class="card-body">
-                <p class="card-text">{{job_vacancy.requisites |slice:":140"}} ...</p>
-            </div>
-        </div>
+        {% include 'JobVacancy/JobVacancyCard.html' with job_vacancy=job_vacancy %}
 
     {% endfor %}
 

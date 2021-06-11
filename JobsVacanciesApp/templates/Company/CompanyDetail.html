@@ -12,8 +12,11 @@ Home
 
 <div class="row d-flex justify-content-center">
     <div class="col-12 d-flex justify-content-center"><h3 class="py-3">{% trans "Jobs Vacancies" %}</h3></div>
-    
-    
+     {% for job_vacancy in  company.jobvacancy_set.all %}
+        
+        {% include 'JobVacancy/JobVacancyCard.html' with job_vacancy=job_vacancy %}
+
+    {% endfor %}    
 
 
 </div>
