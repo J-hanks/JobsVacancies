@@ -25,8 +25,10 @@ class MonthlyChartView(BaseLineChartView):
     object_class = None
 
     def __init__(self, *args, **kwargs):
-        self.data = []
+        self.years = None
         self.years_array = []
+
+        self.data = []
 
         self.years = self.object_class.objects.annotate(
             year=TruncYear('create_date')).values('year')
@@ -39,7 +41,7 @@ class MonthlyChartView(BaseLineChartView):
 
         for year in self.years_array:
             year_data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            self.months = JobVacancy.objects.filter(create_date__year=year).annotate(month=TruncMonth(
+            self.months = self.object_class.objects.filter(create_date__year=year).annotate(month=TruncMonth(
                 'create_date')).values('month').annotate(counter=Count('id')).values('month', 'counter')
             for month in self.months:
                 year_data[month['month'].month - 1] = month['counter']
