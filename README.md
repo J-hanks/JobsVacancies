@@ -36,8 +36,13 @@ python manage.py runserver
 #### Acesss the site
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-### User
+### Users
+#### Common user
 email:      webuser@jobsvacancies.com
+password:   jobsvacancies
+
+#### Company user
+email:      webusercompany@jobsvacancies.com
 password:   jobsvacancies
 
 
