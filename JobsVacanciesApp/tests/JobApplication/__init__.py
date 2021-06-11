@@ -1,0 +1,3 @@
+from .JobApplicationCreateTest import JobApplicationCreateTest
+from .JobApplicationDeleteTest import JobApplicationDeleteTest
+from .JobApplicationUserPointsTest import JobApplicationUserPointsTest

@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
 from django.utils.translation import ugettext as _
 
-from JobsVacanciesApp.tests.SeleniumHelpers import fillInputMaskedElement, SeleniumStaticServernMixin
+from JobsVacanciesApp.tests.SeleniumHelpers import SeleniumStaticServernMixin
 from JobsVacanciesApp.models import WebUser
 import time
 

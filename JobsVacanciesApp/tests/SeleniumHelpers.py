@@ -12,25 +12,21 @@ from django.shortcuts import reverse
 import time
 
 
-
-def fillInputMaskedElement(element, value):
-    element.click()
-    for digit in value:
-        element.send_keys(Keys.HOME, digit)
-        time.sleep(0.3)
-
-
 class SeleniumStaticServernMixin(StaticLiveServerTestCase):
     fixtures = [
+        "Companies.json",
+        "WebUserCompany.json",
         "WebUserAdm.json",
         "WebUser.json",
-        "Companies.json",
         "JobsVacancies.json",
         "JobsApplications.json",
     ]
-    
+
     webuser_email = "webuser@jobsvacancies.com"
     webuser_password = "jobsvacancies"
+
+    webuser_company_email = "webusercompany@jobsvacancies.com"
+    webuser_company_password = "jobsvacancies"
 
     webuser_adm_email = "adm@jobsvacancies.com"
     webuser_adm_password = "jobsvacancies"
@@ -59,6 +55,9 @@ class SeleniumStaticServernMixin(StaticLiveServerTestCase):
     def selenium_login_webuser(self):
         self.selenium_login(self.webuser_email,
                             self.webuser_password)
+    def selenium_login_webuser_company(self):
+        self.selenium_login(self.webuser_company_email,
+                            self.webuser_company_password)
 
     def selenium_login_adm(self):
         self.selenium_login(self.webuser_adm_email,
