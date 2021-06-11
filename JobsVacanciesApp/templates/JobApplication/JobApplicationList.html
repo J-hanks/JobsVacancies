@@ -28,7 +28,7 @@
                         <td><a class="authenticationBarLink" href="{% url 'JobVacancyDetailView' JobApplication.job_vacancy.pk %}">{{ JobApplication.job_vacancy }} </a></td>
                         <td><a href="{% url 'JobVacancyDetailView' JobApplication.job_vacancy.pk %}">{{ JobApplication.job_vacancy.company }} </a></td>
                         <td><a class="job_vacancyApplicationsCount" href="{% url 'JobVacancyDetailView' JobApplication.job_vacancy.pk %}">{{ JobApplication.job_vacancy.applicationsCount }} </a></td>
-                        <td><a class="badge badge-danger" href="{% url 'JobApplicationDeleteView' JobApplication.pk %}">{% trans "Cancel" %}</a></td>
+                        <td><a id="id_job_application_{{JobApplication.pk}}_remove_btn" class="badge badge-danger" href="{% url 'JobApplicationDeleteView' JobApplication.pk %}">{% trans "Cancel" %}</a></td>
                     </tr>
                     {% endfor %}
                     </tbody>

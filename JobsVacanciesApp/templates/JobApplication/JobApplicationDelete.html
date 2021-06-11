@@ -17,7 +17,7 @@
             <div class="col">
                <form method="post">{% csrf_token %}
                     <h5 class="text-warning">Are you sure you want to cancel your application in "{{ object }}"?</h5><br>
-                    <input class="btn btn-danger" type="submit" value="Cancel Application">
+                    <input id="id_submit_btn" class="btn btn-danger" type="submit" value="Cancel Application">
                 </form>
             </div>
         </div>

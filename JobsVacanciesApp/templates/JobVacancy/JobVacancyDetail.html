@@ -50,7 +50,7 @@
                     {% for application in job_vacancy.jobapplication_set.all %}
                     <tr>
                         <td><a class="" href="{% url 'JobVacancyUpdateView' application.pk %}">{{ application.user }} </a></td>
-                        <td>{{ application.userPoints }}</td>
+                        <td id="id_job_application_{{application.pk}}_user_points">{{ application.userPoints }}</td>
                         <td><a id="id_job_vacancy_{{JobVacancy.pk}}_remove_btn" class="badge badge-danger" href="{% url 'JobVacancyDeleteView' application.pk %}">{% trans "Remove" %}</a></td>
                     </tr>
                     {% endfor %}
