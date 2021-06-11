@@ -26,14 +26,25 @@
   "fields": {
     "update_date": "2021-06-08T21:27:29.920Z",
     "create_date": "2021-06-08T21:27:29.920Z",
-    "job_vacancy": 2,
+    "job_vacancy": 1,
     "user": 806202105,
-    "pay_claim": "up_one",
-    "last_education": "4"
+    "pay_claim": "from_one_to_two",
+    "last_education": "1"
   }
 }, {
+    "model": "JobsVacanciesApp.jobapplication",
+    "pk": 4,
+    "fields": {
+      "update_date": "2021-06-08T21:27:29.920Z",
+      "create_date": "2021-06-08T21:27:29.920Z",
+      "job_vacancy": 1,
+      "user": 806202106,
+      "pay_claim": "over_three",
+      "last_education": "4"
+    }
+  }, {
   "model": "JobsVacanciesApp.jobapplication",
-  "pk": 4,
+  "pk": 5,
   "fields": {
     "update_date": "2021-06-08T21:27:47.902Z",
     "create_date": "2021-06-08T21:27:47.905Z",

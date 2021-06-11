@@ -41,5 +41,20 @@
       "groups": [],
       "user_permissions": []
     }
+  },
+  {
+    "model": "JobsVacanciesApp.webuser",
+    "pk": 806202106,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$THFehvtjO2nTxvoWSwI3ih$TXMftOeWtVHxKeyHBjPo3r80Mq1EpPH/9ln2aG9Q5oU=",
+      "last_login": null,
+      "is_superuser": false,
+      "email": "webuser3@jobsvacancies.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-06-08T19:11:36.182Z",
+      "groups": [],
+      "user_permissions": []
+    }
   }
 ]
