@@ -26,6 +26,7 @@ class SeleniumStaticServernMixin(StaticLiveServerTestCase):
         "WebUser.json",
         "Companies.json",
         "JobsVacancies.json",
+        "JobsApplications.json",
     ]
     
     webuser_email = "webuser@jobsvacancies.com"

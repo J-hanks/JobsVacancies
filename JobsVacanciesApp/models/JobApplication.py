@@ -26,5 +26,15 @@ class JobApplication(TimeStampedModelMixin):
         unique_together = [['job_vacancy','user']]
         verbose_name = 'Job Application'
         verbose_name_plural = 'Job Applications'
+
+    def userPoints(self):
+        points = 0
+        if self.job_vacancy.salary_range == self.pay_claim:
+            points = points + 1
+        if  self.last_education >= self.job_vacancy.minimum_education:
+            points = points + 1
+        return points
+
+    
     def __str__(self):
         return f"{self.job_vacancy} - {self.user}"
