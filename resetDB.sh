@@ -15,4 +15,6 @@ python manage.py loaddata "WebUserAdm.json"
 python manage.py loaddata "WebUserCompany.json"
 python manage.py loaddata "JobsApplications.json"
 
+./populate.sh
+
 # python manage.py loaddata "MerchantJoao.json"

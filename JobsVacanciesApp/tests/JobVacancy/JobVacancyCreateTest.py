@@ -90,7 +90,7 @@ class JobVacancyCreateTest(SeleniumStaticServernMixin):
         )
         self.assertTrue(created)
 
-        #Test Detail
+        #   Test Detail
 
 
 
